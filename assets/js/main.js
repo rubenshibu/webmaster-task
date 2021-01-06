@@ -1,8 +1,6 @@
 !(function($) {
 
   "use strict";
-
-  // Back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
@@ -17,7 +15,6 @@
     return false;
   });
 
-  // Header fixed on scroll
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#header').addClass('header-scrolled');
@@ -30,7 +27,6 @@
     $('#header').addClass('header-scrolled');
   }
 
-  // Initialize Venobox
   $(window).on('load', function() {
     $('.venobox').venobox({
       bgcolor: '',
@@ -41,7 +37,6 @@
     });
   });
 
-  // Initiate superfish on nav menu
   $('.nav-menu').superfish({
     animation: {
       opacity: 'show'
@@ -49,7 +44,6 @@
     speed: 400
   });
 
-  // Mobile Navigation
   if ($('#nav-menu-container').length) {
     var $mobile_nav = $('#nav-menu-container').clone().prop({
       id: 'mobile-nav'
@@ -89,7 +83,7 @@
     $("#mobile-nav, #mobile-nav-toggle").hide();
   }
 
-  // Smooth scroll for the navigation menu and links with .scrollto classes
+  
   var scrolltoOffset = $('#header').outerHeight() - 21;
   if (window.matchMedia("(max-width: 991px)").matches) {
     scrolltoOffset += 20;
@@ -125,7 +119,6 @@
     }
   });
 
-  // Activate smooth scroll on page load with hash links in the url
   $(document).ready(function() {
     if (window.location.hash) {
       var initial_nav = window.location.hash;
@@ -138,7 +131,7 @@
     }
   });
 
-  // Navigation active state on scroll
+ 
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, #mobile-nav');
 
@@ -161,7 +154,7 @@
     });
   });
 
-  // Gallery carousel (uses the Owl Carousel library)
+  
   $(".gallery-carousel").owlCarousel({
     autoplay: true,
     dots: true,
@@ -192,17 +185,6 @@
     aos_init();
   });
 
-// jQuery("#clock").countdown("2021/02/21", function (event) {
-//   var $this = jQuery(this).html(
-//     event.strftime(
-//       "" +
-//         '<div class="time-entry days"><span>%-D</span> Days</div> ' +
-//         '<div class="time-entry hours"><span>%H</span> Hours</div> ' +
-//         '<div class="time-entry minutes"><span>%M</span> Minutes</div> ' +
-//         '<div class="time-entry seconds"><span>%S</span> Seconds</div> '
-//     )
-//   );
-// });
 
 (function () {
   const second = 1000,
@@ -222,7 +204,6 @@
           document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
           document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
-        //do something later when date is reached
         if (distance < 0) {
           let headline = document.getElementById("headline"),
               countdown = document.getElementById("countdown"),
@@ -234,7 +215,7 @@
 
           clearInterval(x);
         }
-        //seconds
+      
       }, 0)
   }());
 
