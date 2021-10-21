@@ -1,6 +1,7 @@
 body {
   background: #fff;
   color: #007bff;
+  padding: 0;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -66,6 +67,11 @@ h1, h2, h3, h4, h5, h6 {
   .back-to-top {
     bottom: 15px;
   }
+}
+
+.simple-test-div p {
+  padding: 0;
+  margin: 0 0 30px 0;
 }
 
 .back-to-top:focus {
